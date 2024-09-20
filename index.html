@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITY 5</title>
+    <link rel="stylesheet" href="BOOSTRAP/css/bootstrap.min.css">
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        .navbar {
+            background-color: rgb(66, 66, 143); /* Changed header color to blue */
+        }
+        .navbar.dark-mode {
+            background-color: #1a1a1a;
+        }
+        .featured-title {
+            color: black; /* Default color for light mode */
+        }
+        body.dark-mode .featured-title {
+            color: white; /* Change to white in dark mode */
+        }
+        body.dark-mode .modal-content {
+    background-color: #1a1a1a; /* Dark background for the modal */
+    color: white; /* Light text color */
+}
+
+.modal-header{
+    background-color: rgb(66, 66, 143); /* Change to your desired color */
+    color: white; /* Text color */
+}
+
+
+body.dark-mode .form-control {
+    background-color: #333; /* Dark input background */
+    color: white; /* Input text color */
+    border: 1px solid #555; /* Lighter border */
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+body.dark-mode #footer-a{
+    color: white;           
+}
+
+      
+        .nav-link {
+    margin-right: 20px; /* Space between nav items */
+}
+
+#modeToggle {
+    margin-left: 20px; /* Space before Dark Mode button */
+}
+
+#read{
+    background-color:  rgb(66, 66, 143);
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)"><img src="logo/logo.jpg" width="60px" height="60px" style="border-radius: 50%;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto text-white">
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Services</a></li>
+                </ul>
+                <div class="spacer"></div>
+                <a class="nav-link" href="javascript:void(0)" style="color: white;" data-bs-toggle="modal" data-bs-target="#login">Sign In</a>
+            </div>
+
+                <button id="modeToggle" class="btn btn-light">Dark Mode</button>
+               
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <h2 style="text-align: center;" class="text-success">VISION</h2>
+                <p style="text-align: justify;">
+                    To be the premier online destination for anime enthusiasts, where fans can effortlessly explore, review, 
+                    and engage in meaningful discussions about their favorite series. We envision a vibrant community
+                    where user-generated content fuels rich conversations, personalized recommendations enhance viewing
+                    experiences, and a dedicated platform keeps fans informed about the latest trends and releases. Our goal 
+                    is to cultivate a passionate and inclusive environment 
+                    that celebrates anime culture and fosters connections among fans worldwide.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-6">
+                <h2 style="text-align: center;">Top Viewed Anime</h2>
+                <div id="example" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#example" data-bs-slide-to="0" class=""></button>
+                        <button type="button" data-bs-target="#example" data-bs-slide-to="1" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#example" data-bs-slide-to="2" class=""></button>
+                        <button type="button" data-bs-target="#example" data-bs-slide-to="3" class=""></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="img/1.jpg" alt="deku" class="d-block" style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item active">
+                            <img src="img/2.jpg" alt="anime" class="d-block" style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/3.jpeg" alt="haikyu" class="d-block" style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.jpg" alt="my hero academia" class="d-block" style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#example" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#example" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>                  
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <h2 style="text-align: center;" class="text-warning">MISSION</h2>
+                <p style="text-align: justify;">
+                    Create a platform that allows anime fans to discover, review, and discuss their 
+                    favorite series. Features could include user-generated reviews, a dynamic forum for discussions,
+                    an anime recommendation system based on user preferences, and a blog section for news and 
+                    articles about upcoming releases. The ultimate goal is to foster a vibrant community around anime culture!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h3 class="fs-3 featured-title">Featured Anime</h3>
+                <p style="text-align: justify;">Explore the exciting world of Featured Anime 1. Learn about 
+                  its captivating storylines and beloved characters.</p>
+                <a href="#" class="btn btn-success" id="read">Read More...</a>
+            </div>
+            <div class="col">
+                <h3 class="fs-3 featured-title">Featured Anime</h3>
+                <p style="text-align: justify;">Dive into the adventures of Featured Anime 2, 
+                  a series that has captured the hearts of fans worldwide.</p>
+                <a href="#" class="btn btn-success" id="read">Read More...</a>
+            </div>
+            <div class="col">
+                <h3 class="fs-3 featured-title">Featured Anime </h3>
+                <p style="text-align: justify;">Join the journey in Featured Anime 3, 
+                  known for its stunning animation and rich storytelling.</p>
+                <a href="#" class="btn btn-success" id="read">Read More...</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="container">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3" >
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" id="footer-a">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" id="footer-a">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" id="footer-a">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" id="footer-a">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" id="footer-a">Developer</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Animax</p>
+    </footer>
+</div>
+
+<div class="modal fade" id="login">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="color:white;">Sign In</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="errorMessage" class="alert alert-danger"></div>
+                <div id="successMessage" class="alert alert-success"></div>
+                <form action="" method="post" id="loginForm">
+                    <div class="form-floating">
+                        <input class="form-control" id="inputUsername" name="inputUsername" type="text" placeholder="" />
+                        <label for="inputUsername">Username:</label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" id="inputPassword" name="inputPassword" type="password" placeholder="" />
+                        <label for="inputPassword">Password:</label>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success" name="login" style="background-color: rgb(66, 66, 143);">
+                  <a href="/Dashboard.html" style="color: white; text-decoration: solid; ">Sign up</a></button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/App/forgotPassword.html">Forgot password</a>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#errorMessage').hide();
+    $('#successMessage').hide();
+
+    $('#loginForm').submit(function(event) {
+        event.preventDefault();
+        $('#errorMessage').hide();
+        $('#successMessage').hide();
+
+        var username = $('#inputUsername').val();
+        var password = $('#inputPassword').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'App/Controller/User.php',
+            data: {
+                login: true,
+                inputUsername: username,
+                inputPassword: password
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    $('#successMessage').text('Successfully logged in!').show();
+                    setTimeout(function() {
+                        window.location.href = 'App/View/index';
+                    }, 2000);
+                } else {
+                    $('#errorMessage').text(response.message).show();
+                    setTimeout(function() {
+                        $('#errorMessage').fadeOut();
+                    }, 2000);
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+
+    $('#modeToggle').click(function() {
+        $('body').toggleClass('dark-mode');
+        $(this).toggleClass('btn-light btn-dark');
+        $(this).text($(this).text() === 'Dark Mode' ? 'Light Mode' : 'Dark Mode');
+    });
+});
+</script>
+<script src="BOOSTRAP/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
